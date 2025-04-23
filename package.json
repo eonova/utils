@@ -1,20 +1,20 @@
 {
-  "name": "@ileostar/utils",
-  "version": "1.0.6",
+  "name": "@eonova/utils",
+  "version": "0.0.1",
   "type": "module",
-  "description": "Opinionated collection of common JavaScript / TypeScript utils by @ileostar",
-  "packageManager": "pnpm@8.13.1",
-  "author": "LeoStar <https://github.com/ileostar>",
+  "description": "Opinionated collection of common JavaScript / TypeScript utils by @eonova",
+  "packageManager": "pnpm@10.2.1",
+  "author": "Nova Eon <https://github.com/eonova>",
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "prepare": "husky install",
+    "prepare": "simple-git-hooks",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
+    "lint:fix": "eslint src/**/*.*  --fix",
     "commit": "git add . && git-cz",
-    "push": "git push",
-    "fix": "eslint src/**/*.*  --fix",
     "release": "bumpp --commit --push --tag && npm publish",
+    "up": "taze major -I",
     "start": "esno src/index.ts",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -29,6 +29,9 @@
     "commitizen": {
       "path": "./node_modules/cz-emoji"
     }
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
     "src/**/*.{js,vue}": [
@@ -53,8 +56,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@ileostar/eslint-config": "^0.3.0",
-    "@ileostar/utils": "^1.0.6",
+    "@eonova/eslint-config": "^0.3.0",
     "@types/node": "^20.10.6",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@typescript-eslint/parser": "^6.17.0",
