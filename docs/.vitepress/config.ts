@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh-CN',
-  title: '@ileostar/utils',
+  title: '@eonova/utils',
   description: 'Some common tool functions',
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
   lastUpdated: true,
@@ -55,7 +55,7 @@ export default defineConfig({
     footer: {
       message: 'Released under the MIT License.',
       copyright:
-        'Copyright © 2023-present <a href="https://github.com/ileostar/ileostar-utils">ileostar-utils</a>'
+        'Copyright © 2023-present <a href="https://github.com/eonova/utils">@eonova/utils</a>'
     },
 
     editLink: {
@@ -95,6 +95,6 @@ export default defineConfig({
       }
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/ileostar/ileostar-utils' }]
+    socialLinks: [{ icon: 'github', link: 'https://github.com/eonova/utils' }]
   }
 })

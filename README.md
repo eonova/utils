@@ -1,3 +1,3 @@
-# ileostar-utils
+# @eonova/utils
 
 自定义类库

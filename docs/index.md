@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: '@ileostar/utils'
+  name: '@eonova/utils'
   text: 常用的工具函数
   tagline: 让开发更加高效
   actions:
