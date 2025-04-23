@@ -2,7 +2,7 @@
   "name": "@eonova/utils",
   "version": "0.0.2",
   "type": "module",
-  "description": "Opinionated collection of common JavaScript / TypeScript utils by @eonova",
+  "description": "Opinionated collection of common JavaScript / TypeScript utils.",
   "packageManager": "pnpm@10.2.1",
   "author": "Nova Eon <https://github.com/eonova>",
   "scripts": {
