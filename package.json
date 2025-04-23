@@ -72,6 +72,8 @@
     "rollup": "^4.9.2",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-esbuild": "^6.1.0",
+    "simple-git-hooks": "^2.12.1",
+    "taze": "^19.0.4",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
     "vitepress": "1.0.0-rc.34",
