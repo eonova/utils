@@ -1,30 +1,31 @@
 {
   "name": "@eonova/utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
-  "description": "Opinionated collection of common JavaScript / TypeScript utils.",
+  "description": "Opinionated collection of common JavaScript / TypeScript utils by @eonova",
   "packageManager": "pnpm@10.2.1",
   "author": "Nova Eon <https://github.com/eonova>",
-  "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "prepare": "simple-git-hooks",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
-    "lint:fix": "eslint src/**/*.*  --fix",
-    "commit": "git add . && git-cz",
-    "release": "bumpp --commit --push --tag && npm publish",
-    "up": "taze major -I",
-    "start": "esno src/index.ts",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs",
-    "test": "vitest"
+  "homepage": "https://github.com/eonova/utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eonova/utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eonova/utils/issues"
   },
   "keywords": [
     "utils"
   ],
-  "license": "MIT",
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-emoji"
@@ -39,21 +40,20 @@
       "git add ."
     ]
   },
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "lint-fix": "nr lint --fix",
+    "prepublishOnly": "pnpm run build",
+    "release": "bumpp && pnpm publish",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest"
   },
   "devDependencies": {
     "@eonova/eslint-config": "^0.3.0",
