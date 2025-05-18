@@ -47,13 +47,16 @@
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
-    "lint": "eslint .",
-    "lint-fix": "nr lint --fix",
+    "lint": "eslint",
+    "lint-fix": "eslint --fix",
     "prepublishOnly": "pnpm run build",
     "release": "bumpp && pnpm publish",
     "start": "tsx src/index.ts",
     "typecheck": "tsc --noEmit",
-    "test": "vitest"
+    "test": "vitest",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
     "@eonova/eslint-config": "^0.3.0",
